@@ -15,4 +15,4 @@ jobs:
       - name: Hello-World
         run: echo "Hello ${{inputs.who-to-greet}}"
       - name: Reveal-Secret
-        run: echo "The secret is '${{secrets.secret-phrase}}'"
+        run: echo "The secret is '${{secrets.example-secret}}'"
