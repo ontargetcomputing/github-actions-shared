@@ -2,7 +2,7 @@ name: hello-world
 on:
   workflow_call:
     inputs:
-      example-input:
+      who-to-greet:
         required: true
         type: string
     secrets:
@@ -13,4 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello-World
-        run: echo "Hello World!"
+        run: echo "Hello ${{inputs.who-to-greet}}"
+      - name: Reveal-Secret
+        run: echo "The secret is '${{secrets.secret-phrase}}'"
