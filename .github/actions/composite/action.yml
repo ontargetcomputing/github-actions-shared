@@ -16,7 +16,7 @@ runs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ inputs.access_key }}
-        aws-secret-access-key: ${{ inputs.secret_acces_key }}
+        aws-secret-access-key: ${{ inputs.secret_access_key }}
         aws-region: us-west-2
     - name: S3 LS
       run: |
