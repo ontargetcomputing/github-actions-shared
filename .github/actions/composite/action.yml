@@ -4,7 +4,7 @@ inputs:
     default: 'No name provided'
   access_key:
     description: 'the access key'
-  secret_acces_key:
+  secret_access_key:
     description: 'the secret_acces_key'
 
 runs:
