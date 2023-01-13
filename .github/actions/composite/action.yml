@@ -8,13 +8,16 @@ inputs:
     description: 'the secret_acces_key'
 outputs:
   my-output:
-    value: "this is my value"
+    value: "this is my value - 123"
+  account-id: 
+    value: ${{steps.aws.outputs.aws-account-id}}
 runs:
   using: "composite"
   steps: 
     - run: echo Hello ${{ inputs.name }}.
       shell: bash
     - name: Configure AWS Credentials
+      id: aws
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ inputs.access_key }}
