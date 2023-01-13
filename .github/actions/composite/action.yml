@@ -6,7 +6,9 @@ inputs:
     description: 'the access key'
   secret_access_key:
     description: 'the secret_acces_key'
-
+outputs:
+  my-output:
+    value: "this is my value"
 runs:
   using: "composite"
   steps: 
